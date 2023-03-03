@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
-
 def square_matrix_simple(matrix=[]):
-    return ([list(map(lambda x: x * x, row)) for row in matrix])
+    if not matrix:
+        print()
+    return [[element * element for element in row] for row in matrix]
