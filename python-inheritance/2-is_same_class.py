@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Checks object class"""
+"""Defines a class-checking function."""
 
 
 def is_same_class(obj, a_class):
-    """Checks object class
-    Args:
-        - obj: object to class
-        - a_class: class to check
-    """
-    return type(obj) is
+
+    """Check if an object is exactly an instance of a given class."""
+
+    if type(obj) == a_class:
+        return True
+    return False
