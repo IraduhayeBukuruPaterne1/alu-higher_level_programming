@@ -29,4 +29,3 @@ Footer navigation
 Terms
 Privacy
 Security
-
