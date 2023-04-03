@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""I documented you"""
-
+''' sends a reques to url and displays a certain variable '''
 import urllib.request
 import sys
 
-if __name__ == '__main__':
-    with urllib.request.urlopen(sys.argv[1]) as response:
-        header = response.info()
-        print(header["X-Request-Id"])\
+if __name__ == "__main__":
+    url = sys.argv[1]
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))
